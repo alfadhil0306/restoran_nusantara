@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restoran Nusantara | Indonesian Restaurant in Sentosa</title>
+  <meta name="description" content="Restoran Nusantara serves authentic Indonesian home cooking in Sukamaju, Sentosa. Fresh daily meals, affordable prices, dine in, take away, and WhatsApp ordering.">
+  <meta name="keywords" content="Restoran Nusantara, Warteg Sukamaju, Indonesian restaurant Sentosa, Warung Tegal, Indonesian food, Sentosa restaurant">
+  <meta name="author" content="Restoran Nusantara">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#D62828">
+  <meta property="og:title" content="Restoran Nusantara | Indonesian Restaurant">
+  <meta property="og:description" content="Freshly prepared Indonesian dishes served daily with authentic homemade flavors in Sukamaju, Sentosa.">
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=80">
+  <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Restoran%20Nusantara%22,%22short_name%22:%22Nusantara%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%23FFF8F0%22,%22theme_color%22:%22%23D62828%22}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script>
+    tailwind.config={darkMode:'class',theme:{extend:{colors:{elsaRed:'#D62828',elsaOrange:'#F77F00',elsaGold:'#FCBF49',elsaCream:'#FFF8F0',elsaDark:'#222222'},fontFamily:{sans:['Inter','sans-serif'],display:['Playfair Display','serif'],poppins:['Poppins','sans-serif']},boxShadow:{premium:'0 24px 70px rgba(34,34,34,.14)',glow:'0 18px 44px rgba(214,40,40,.24)'}}}};
+  </script>
+  <style>
+    body{font-family:Inter,sans-serif;color:#222;background:#FFF8F0;overflow-x:hidden}.font-display{font-family:'Playfair Display',serif}
+    .glass{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.48);backdrop-filter:blur(18px)}.dark .glass{background:rgba(26,26,26,.72);border-color:rgba(255,255,255,.1)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    .food-card{transition:all .35s cubic-bezier(.4,0,.2,1)}.food-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.12)}
+    .float-card{animation:floatCard 5s ease-in-out infinite}.float-card:nth-child(2){animation-delay:.8s}@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .ripple{position:relative;overflow:hidden}.ripple span.ripple-dot{position:absolute;border-radius:999px;transform:scale(0);animation:ripple .65s linear;background:rgba(255,255,255,.55);pointer-events:none}@keyframes ripple{to{transform:scale(4);opacity:0}}
+    .masonry{column-count:3;column-gap:1rem}.masonry figure{break-inside:avoid;margin-bottom:1rem}.parallax-bg{background-attachment:fixed}
+    @media(max-width:900px){.masonry{column-count:2}}@media(max-width:560px){.masonry{column-count:1}}@media(max-width:768px){.parallax-bg{background-attachment:scroll}}
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#FFF8F0}::-webkit-scrollbar-thumb{background:#D62828;border-radius:4px}.dark ::-webkit-scrollbar-track{background:#0a0a0a}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Restoran Nusantara","servesCuisine":["Indonesian","Warung Tegal"],"image":"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=80","telephone":"+628123456789","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Jl. Merdeka No.123","addressLocality":"Sentosa","addressCountry":"ID"}}</script>
+</head>
+<body class="bg-elsaCream text-elsaDark antialiased transition-colors duration-500 dark:bg-neutral-950 dark:text-white selection:bg-elsaRed selection:text-white">
+
+<div id="loadingScreen" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-elsaCream transition-opacity duration-700 dark:bg-neutral-950">
+  <div class="relative grid h-20 w-20 place-items-center rounded-full bg-elsaRed text-3xl text-white shadow-glow animate-bounce">
+    <i class="fa-solid fa-bowl-rice"></i>
+  </div>
+  <h2 class="mt-4 font-display text-2xl font-bold tracking-wider text-elsaDark dark:text-white">RESTORAN NUSANTARA</h2>
+  <p class="text-xs font-semibold uppercase tracking-[0.3em] text-elsaOrange">Loading Authentic Flavors...</p>
+</div>
+
+<div id="scrollProgress" class="fixed left-0 top-0 z-[90] h-1.5 w-0 bg-gradient-to-r from-elsaOrange via-elsaRed to-elsaGold transition-all duration-150"></div>
+
+<div id="flashSaleBar" class="relative z-50 bg-gradient-to-r from-elsaRed via-elsaOrange to-elsaRed px-4 py-2 text-center text-xs font-extrabold tracking-wide text-white shadow-md">
+  <span>🔥 FLASH SALE HARI INI: DISKON 15% DENGAN KODE <span class="rounded bg-white px-1.5 py-0.5 font-mono text-elsaRed">HEMAT15</span> — BERAKHIR DALAM: <span id="countdownTimer" class="font-mono text-elsaGold">00:00:00</span></span>
+</div>
+
+<header id="siteHeader" class="sticky top-0 z-40 transition-all duration-300">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Primary navigation">
+    <a href="#home" class="flex items-center gap-3 rounded-full glass px-3 py-2 shadow-md transition hover:scale-105">
+      <span class="grid h-10 w-10 place-items-center rounded-full bg-elsaRed text-white shadow-glow"><i class="fa-solid fa-bowl-rice"></i></span>
+      <span>
+        <span class="block font-display text-lg font-bold leading-none">Restoran Nusantara</span>
+        <span class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-elsaOrange">
+          Sentosa <span id="headerStatusDot" class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+        </span>
+      </span>
+    </a>
+    
+    <div class="hidden items-center gap-6 rounded-full glass px-6 py-2.5 text-sm font-semibold shadow-md lg:flex">
+      <a href="#about" class="hover:text-elsaRed transition">About</a>
+      <a href="#menu" class="hover:text-elsaRed transition">Menu</a>
+      <a href="#gallery" class="hover:text-elsaRed transition">Gallery</a>
+      <a href="#reviews" class="hover:text-elsaRed transition">Reviews</a>
+      <a href="#contact" class="hover:text-elsaRed transition">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-2.5">
+      <button id="cartBtn" class="relative grid h-10 w-10 place-items-center rounded-full glass shadow-md text-elsaDark dark:text-white hover:bg-elsaRed hover:text-white transition" type="button" aria-label="Shopping Cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartCount" class="absolute -right-1 -top-1 grid h-5 w-5 place-items-center rounded-full bg-elsaRed text-[11px] font-extrabold text-white scale-0 transition-transform duration-300">0</span>
+      </button>
+
+      <button id="themeToggle" class="grid h-10 w-10 place-items-center rounded-full glass shadow-md text-elsaDark dark:text-white hover:rotate-45 transition duration-300" type="button" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <button id="mobileMenuBtn" class="grid h-10 w-10 place-items-center rounded-full bg-elsaDark text-white shadow-md lg:hidden dark:bg-white dark:text-elsaDark" type="button" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="hidden border-b border-neutral-200/20 glass px-6 py-4 shadow-xl lg:hidden">
+    <div class="flex flex-col gap-3 font-semibold">
+      <a class="rounded-xl px-4 py-2 hover:bg-elsaRed hover:text-white transition" href="#about">About</a>
+      <a class="rounded-xl px-4 py-2 hover:bg-elsaRed hover:text-white transition" href="#menu">Menu</a>
+      <a class="rounded-xl px-4 py-2 hover:bg-elsaRed hover:text-white transition" href="#gallery">Gallery</a>
+      <a class="rounded-xl px-4 py-2 hover:bg-elsaRed hover:text-white transition" href="#reviews">Reviews</a>
+      <a class="rounded-xl px-4 py-2 hover:bg-elsaRed hover:text-white transition" href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section id="home" class="relative min-h-[92vh] overflow-hidden parallax-bg bg-cover bg-center flex items-center" style="background-image:linear-gradient(90deg,rgba(20,20,20,.88),rgba(20,20,20,.4)),url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1800&q=85')">
+    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-elsaCream to-transparent dark:from-neutral-950"></div>
+    
+    <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 w-full">
+      <div class="reveal max-w-2xl text-white">
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-bold backdrop-blur-md">
+          <span id="heroStoreBadge" class="inline-block h-2.5 w-2.5 rounded-full bg-green-500"></span>
+          <span id="heroStoreText">Buka Setiap Hari 08:00 - 21:00</span>
+        </div>
+        <h1 class="font-display text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">Indonesian Home Dining.</h1>
+        <p class="mt-4 text-base sm:text-lg text-neutral-300 leading-relaxed">Racikan bumbu rempah asli Nusantara yang dimasak segar setiap pagi. Menghadirkan kenyamanan cita rasa masakan ibu di setiap suapan.</p>
+        
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#menu" class="ripple inline-flex items-center gap-3 rounded-full bg-elsaRed px-8 py-4 font-bold text-white shadow-glow transition hover:bg-red-700 hover:-translate-y-0.5">
+            <i class="fa-solid fa-utensils"></i> Pesan Sekarang
+          </a>
+          <button onclick="openAdminModal()" class="ripple inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-4 font-semibold text-white backdrop-blur-md transition hover:bg-white/20">
+            <i class="fa-solid fa-lock text-xs text-elsaGold"></i> Admin Demo
+          </button>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div class="rounded-2xl glass p-3.5 text-center text-elsaDark dark:text-white">
+            <strong id="statTotalMenu" class="block font-display text-2xl font-bold text-elsaRed dark:text-elsaGold">10</strong>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">Total Menu</span>
+          </div>
+          <div class="rounded-2xl glass p-3.5 text-center text-elsaDark dark:text-white">
+            <strong id="statRating" class="block font-display text-2xl font-bold text-elsaRed dark:text-elsaGold">4.8</strong>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">Rating</span>
+          </div>
+          <div class="rounded-2xl glass p-3.5 text-center text-elsaDark dark:text-white">
+            <strong id="statCategories" class="block font-display text-2xl font-bold text-elsaRed dark:text-elsaGold">8</strong>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">Kategori</span>
+          </div>
+          <div class="rounded-2xl glass p-3.5 text-center text-elsaDark dark:text-white">
+            <strong id="statPromo" class="block font-display text-2xl font-bold text-elsaRed dark:text-elsaGold">Aktif</strong>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">Promo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:block relative">
+        <article class="float-card ml-auto w-72 rounded-3xl glass p-4 shadow-premium">
+          <img class="h-40 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=700&q=80" alt="Nasi Rames">
+          <div class="mt-3 flex justify-between items-center">
+            <h3 class="font-display text-xl font-bold">Nasi Rames Spesial</h3>
+            <span class="text-xs font-bold bg-elsaRed/10 text-elsaRed px-2 py-1 rounded-md">⭐ 4.9</span>
+          </div>
+          <p class="text-xs text-neutral-500 mt-1">Lauk lengkap, sambal terasi pedas mantap.</p>
+        </article>
+        
+        <article class="float-card mt-6 w-72 rounded-3xl glass p-4 shadow-premium -translate-x-12">
+          <img class="h-40 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1625938145744-e3805153994d?auto=format&fit=crop&w=700&q=80" alt="Ayam Goreng">
+          <div class="mt-3 flex justify-between items-center">
+            <h3 class="font-display text-xl font-bold">Ayam Rempah</h3>
+            <span class="text-xs font-bold bg-elsaOrange/10 text-elsaOrange px-2 py-1 rounded-md">🌶️ Pedas Sedang</span>
+          </div>
+          <p class="text-xs text-neutral-500 mt-1">Digoreng garing dengan serundeng laos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="px-4 py-20 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div class="reveal relative">
+        <img class="h-[460px] w-full rounded-3xl object-cover shadow-premium" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=82" alt="Masakan Nusantara">
+        <div class="absolute -bottom-6 left-6 right-6 rounded-2xl bg-white p-6 shadow-xl dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800">
+          <h3 class="font-display text-2xl font-bold text-elsaRed dark:text-elsaGold">Warisan Rasa Keluarga</h3>
+          <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">Kami menjaga keaslian resep tradisional warteg dengan standar kebersihan restoran modern.</p>
+        </div>
+      </div>
+      
+      <div class="reveal">
+        <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-elsaOrange">TENTANG KAMI</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold sm:text-5xl leading-tight">Cita Rasa Warteg Klasik, Pengalaman Kelas Atas.</h2>
+        <p class="mt-5 text-neutral-600 dark:text-neutral-300 leading-relaxed">Berlokasi strategis di Sukamaju, Sentosa, Restoran Nusantara mengubah cara Anda menikmati hidangan rames harian. Tanpa pengawet, bahan baku langsung dari petani lokal, dan disajikan hangat.</p>
+        
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl bg-white p-5 shadow-sm border border-neutral-100 dark:bg-neutral-900 dark:border-neutral-800">
+            <i class="fa-solid fa-leaf text-2xl text-elsaRed"></i>
+            <h4 class="mt-3 font-bold text-base">Bahan 100% Segar</h4>
+            <p class="mt-1 text-xs text-neutral-500">Sayur dan daging dimasak baru setiap siklus operasional.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-5 shadow-sm border border-neutral-100 dark:bg-neutral-900 dark:border-neutral-800">
+            <i class="fa-solid fa-hand-holding-dollar text-2xl text-elsaRed"></i>
+            <h4 class="mt-3 font-bold text-base">Harga Jujur</h4>
+            <p class="mt-1 text-xs text-neutral-500">Kualitas premium dengan harga ramah kantong harian.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="bg-white px-4 py-20 dark:bg-neutral-900 sm:px-6 lg:px-8 border-y border-neutral-100 dark:border-neutral-800/50">
+    <div class="mx-auto max-w-7xl">
+      <div class="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-elsaOrange">DAFTAR HIDANGAN</p>
+          <h2 class="mt-2 font-display text-3xl font-extrabold sm:text-5xl">Eksplorasi Menu Kami</h2>
+        </div>
+        
+        <div class="w-full md:w-80">
+          <div class="flex items-center gap-2.5 rounded-full border border-neutral-200 bg-elsaCream px-4 py-2.5 dark:border-neutral-700 dark:bg-neutral-950 focus-within:border-elsaRed transition">
+            <i class="fa-solid fa-magnifying-glass text-sm text-neutral-400"></i>
+            <input id="menuSearch" class="w-full bg-transparent text-sm outline-none placeholder:text-neutral-400" type="search" placeholder="Cari lauk, sayur, minuman...">
+          </div>
+        </div>
+      </div>
+
+      <div id="categoryFilters" class="reveal mt-8 flex gap-2 overflow-x-auto pb-2 scrollbar-none"></div>
+
+      <div id="menuGrid" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+    </div>
+  </section>
+
+  <section class="px-4 py-20 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="reveal text-center max-w-2xl mx-auto">
+      <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-elsaOrange">KEUNGGULAN</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold sm:text-4xl">Mengapa Pelanggan Setia Bersama Kami</h2>
+    </div>
+    <div id="whyGrid" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
+  </section>
+
+  <section id="gallery" class="bg-elsaDark px-4 py-20 text-white sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="reveal max-w-2xl">
+        <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-elsaGold">GALERI MASAKAN</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold sm:text-5xl">Visual Cita Rasa Hangat</h2>
+      </div>
+      <div id="galleryGrid" class="masonry mt-10"></div>
+    </div>
+  </section>
+
+  <section id="reviews" class="px-4 py-20 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="reveal grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+      <div>
+        <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-elsaOrange">ULASAN PELANGGAN</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold sm:text-5xl">Dicintai Warga Sukamaju</h2>
+        
+        <div class="mt-8 rounded-3xl bg-white p-8 shadow-premium dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800">
+          <div class="flex items-baseline gap-3">
+            <span class="text-6xl font-black text-elsaRed dark:text-elsaGold" data-counter="4.8">0</span>
+            <span class="text-2xl font-bold text-elsaOrange">/ 5.0</span>
+          </div>
+          <div class="flex text-elsaGold my-2">★★★★★</div>
+          <p class="font-bold text-sm">Rating Rata-rata Keseluruhan</p>
+          <p class="text-xs text-neutral-500 mt-1">Diambil dari ulasan pesanan Dine-in & WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <article class="rounded-2xl bg-white p-6 shadow-sm dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800">
+          <div class="flex items-center gap-3">
+            <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Sari">
+            <div>
+              <h5 class="font-bold text-sm">Sari Maharani</h5>
+              <p class="text-xs text-elsaOrange">★★★★★</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">"Soto ayamnya juara banget! Kuah kuningnya gurih tapi nggak bikin enek. Pelayanan pas jam makan siang juga super cepat."</p>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800">
+          <div class="flex items-center gap-3">
+            <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Andi">
+            <div>
+              <h5 class="font-bold text-sm">Andi Pratama</h5>
+              <p class="text-xs text-elsaOrange">★★★★★</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">"Warteg terbersih di daerah Sentosa. Fitur pesan lewat WA gampang banget, tinggal datang langsung ambil pesanan bungkus."</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-white px-4 py-20 dark:bg-neutral-900 sm:px-6 lg:px-8 border-t border-neutral-100 dark:border-neutral-800">
+    <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
+      <div class="reveal">
+        <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-elsaOrange">LOKASI & KONTAK</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold sm:text-5xl">Kunjungi Kami Hari Ini</h2>
+        
+        <div class="mt-8 space-y-4">
+          <div class="flex items-start gap-4 rounded-2xl bg-elsaCream p-5 dark:bg-neutral-950">
+            <i class="fa-solid fa-location-dot text-xl text-elsaRed mt-1"></i>
+            <div>
+              <h5 class="font-bold text-sm">Alamat Restoran</h5>
+              <p id="dispAddress" class="text-xs text-neutral-600 dark:text-neutral-300 mt-1">Jl. Merdeka No.123, Sukamaju, Sentosa, Indonesia</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-elsaCream p-5 dark:bg-neutral-950">
+              <i class="fa-solid fa-phone text-elsaRed mb-2"></i>
+              <h5 class="font-bold text-sm">WhatsApp / Telepon</h5>
+              <p id="dispPhone" class="text-xs text-neutral-600 dark:text-neutral-300 mt-1">+62 812-3456-789</p>
+            </div>
+            <div class="rounded-2xl bg-elsaCream p-5 dark:bg-neutral-950">
+              <i class="fa-solid fa-clock text-elsaRed mb-2"></i>
+              <h5 class="font-bold text-sm">Jam Operasional</h5>
+              <p id="dispHours" class="text-xs text-neutral-600 dark:text-neutral-300 mt-1">08:00 - 21:00 WIB</p>
+            </div>
+          </div>
+
+          <div class="flex gap-3 pt-2">
+            <a id="btnCallWA" href="https://wa.me/628123456789" target="_blank" class="ripple flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 py-3.5 text-xs font-bold text-white shadow-md hover:bg-green-700 transition">
+              <i class="fa-brands fa-whatsapp text-base"></i> Chat WhatsApp
+            </a>
+            <a href="https://maps.google.com" target="_blank" class="ripple flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-elsaDark py-3.5 text-xs font-bold text-white dark:bg-white dark:text-elsaDark hover:opacity-90 transition">
+              <i class="fa-solid fa-map"></i> Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal grid gap-6">
+        <iframe class="h-64 sm:h-80 w-full rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-md" src="https://maps.google.com/maps?q=Sentosa,Indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        
+        <form id="quickContactForm" onsubmit="sendQuickMsg(event)" class="rounded-3xl bg-elsaCream p-6 dark:bg-neutral-950 border border-neutral-200/50 dark:border-neutral-800">
+          <h4 class="font-display text-xl font-bold">Kirim Pesan Cepat</h4>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2">
+            <input required type="text" id="qcName" placeholder="Nama Anda" class="rounded-xl border border-neutral-200 bg-white px-3.5 py-2.5 text-xs outline-none focus:border-elsaRed dark:border-neutral-800 dark:bg-neutral-900">
+            <input required type="tel" id="qcPhone" placeholder="No. WhatsApp" class="rounded-xl border border-neutral-200 bg-white px-3.5 py-2.5 text-xs outline-none focus:border-elsaRed dark:border-neutral-800 dark:bg-neutral-900">
+          </div>
+          <textarea required id="qcMsg" rows="3" placeholder="Tulis pertanyaan atau saran..." class="mt-3 w-full rounded-xl border border-neutral-200 bg-white p-3.5 text-xs outline-none focus:border-elsaRed dark:border-neutral-800 dark:bg-neutral-900"></textarea>
+          <button type="submit" class="ripple mt-3 w-full rounded-xl bg-elsaRed py-3 text-xs font-bold text-white shadow-glow hover:bg-red-700 transition">Kirim via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-elsaDark px-4 py-12 text-white sm:px-6 lg:px-8 border-t border-white/10">
+  <div class="mx-auto max-w-7xl grid gap-8 md:grid-cols-4 text-xs">
+    <div>
+      <h3 class="font-display text-xl font-bold text-white">Restoran Nusantara</h3>
+      <p class="mt-2 text-neutral-400 leading-relaxed">Cita rasa autentik hidangan rumah Indonesia harian di Sentosa.</p>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm tracking-wider uppercase text-elsaGold">Navigasi</h4>
+      <div class="mt-3 flex flex-col gap-2 text-neutral-400">
+        <a href="#about" class="hover:text-white transition">About Us</a>
+        <a href="#menu" class="hover:text-white transition">Daftar Menu</a>
+        <a href="#reviews" class="hover:text-white transition">Ulasan Pelanggan</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm tracking-wider uppercase text-elsaGold">Operasional</h4>
+      <p class="mt-3 text-neutral-400">Senin - Minggu<br>08:00 AM - 09:00 PM</p>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm tracking-wider uppercase text-elsaGold">Sistem</h4>
+      <div class="mt-3 flex flex-col gap-2">
+        <button onclick="openAdminModal()" class="text-left text-neutral-400 hover:text-elsaGold transition underline">Login Admin Panel</button>
+        <span class="text-[10px] text-neutral-500">v2.5 Pro Modular Architecture</span>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto max-w-7xl mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[11px] text-neutral-500">
+    <p>© 2026 Restoran Nusantara Sentosa. All rights reserved.</p>
+    <p>Powered by Modern PWA & LocalStorage Storage</p>
+  </div>
+</footer>
+
+<button id="backToTop" class="fixed bottom-20 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-elsaDark text-white shadow-xl transition hover:-translate-y-1 dark:bg-white dark:text-elsaDark" type="button" aria-label="Ke atas">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+<a href="https://wa.me/628123456789" target="_blank" class="fixed bottom-5 right-5 z-40 grid h-13 w-13 p-3.5 place-items-center rounded-full bg-green-500 text-2xl text-white shadow-glow transition hover:scale-110" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<div id="toastContainer" class="fixed bottom-6 left-6 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+
+<div id="lightbox" class="fixed inset-0 z-[90] hidden items-center justify-center bg-black/90 p-4 backdrop-blur-md transition-opacity duration-300">
+  <button id="closeLightbox" class="absolute right-6 top-6 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white hover:bg-elsaRed transition" aria-label="Tutup"><i class="fa-solid fa-xmark text-lg"></i></button>
+  <img id="lightboxImage" class="max-h-[85vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl transition-transform duration-300 scale-95" src="" alt="">
+</div>
+
+<div id="detailModal" class="fixed inset-0 z-[85] hidden items-center justify-center bg-black/80 p-4 backdrop-blur-sm transition-all">
+  <div class="relative w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 animate-in fade-in zoom-in duration-200 overflow-hidden">
+    <button onclick="closeModal('detailModal')" class="absolute right-5 top-5 z-10 grid h-9 w-9 place-items-center rounded-full bg-black/50 text-white hover:bg-elsaRed transition"><i class="fa-solid fa-xmark"></i></button>
+    <img id="detImg" class="h-60 w-full rounded-2xl object-cover" src="" alt="">
+    
+    <div class="mt-5">
+      <div class="flex items-center justify-between">
+        <span id="detCat" class="rounded-full bg-elsaRed/10 px-3 py-1 text-xs font-bold text-elsaRed">Kategori</span>
+        <div class="flex items-center gap-2">
+          <span id="detSpicy" class="text-xs font-bold text-elsaOrange">🌶️ Pedas</span>
+          <span id="detRate" class="text-xs font-bold text-elsaGold">⭐ 4.8</span>
+        </div>
+      </div>
+      
+      <h3 id="detTitle" class="mt-3 font-display text-2xl font-bold">Nama Menu</h3>
+      <p id="detDesc" class="mt-2 text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">Deskripsi lengkap hidangan.</p>
+      
+      <div class="mt-6 flex items-center justify-between border-t border-neutral-100 dark:border-neutral-800 pt-4">
+        <div>
+          <span class="text-[10px] uppercase font-bold text-neutral-400">Harga Satuan</span>
+          <div id="detPrice" class="text-2xl font-extrabold text-elsaRed dark:text-elsaGold">Rp 0</div>
+        </div>
+        <button id="detAddBtn" class="ripple inline-flex items-center gap-2 rounded-full bg-elsaRed px-6 py-3.5 text-xs font-bold text-white shadow-glow hover:bg-red-700 transition">
+          <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cartModal" class="fixed inset-0 z-[85] hidden justify-end bg-black/60 backdrop-blur-xs transition-opacity">
+  <div class="flex h-full w-full max-w-md flex-col justify-between bg-white shadow-2xl dark:bg-neutral-900 border-l border-neutral-100 dark:border-neutral-800 animate-in slide-in-from-right duration-300">
+    <div class="p-5 border-b border-neutral-100 dark:border-neutral-800 flex justify-between items-center bg-elsaCream/50 dark:bg-neutral-950">
+      <div class="flex items-center gap-2.5">
+        <i class="fa-solid fa-basket-shopping text-elsaRed text-lg"></i>
+        <h3 class="font-display text-lg font-bold">Keranjang Pesanan</h3>
+      </div>
+      <button onclick="closeModal('cartModal')" class="grid h-8 w-8 place-items-center rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div id="cartList" class="flex-1 overflow-y-auto p-5 space-y-4 divide-y divide-neutral-100 dark:divide-neutral-800/60"></div>
+
+    <div class="p-5 bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800 space-y-3">
+      <div class="flex gap-2">
+        <input type="text" id="voucherInput" placeholder="Kode Promo (cth: HEMAT15)" class="flex-1 uppercase font-mono text-xs rounded-xl border border-neutral-200 bg-white px-3 py-2 outline-none dark:border-neutral-800 dark:bg-neutral-900">
+        <button onclick="applyPromoCode()" class="rounded-xl bg-elsaDark px-4 text-xs font-bold text-white dark:bg-white dark:text-elsaDark hover:opacity-90 transition">Pakai</button>
+      </div>
+      <p id="promoMsg" class="text-[11px] font-bold text-green-600 hidden"></p>
+
+      <div class="space-y-1.5 text-xs pt-2">
+        <div class="flex justify-between text-neutral-500"><span>Subtotal Menu</span><span id="cartSubtotal font-mono">Rp 0</span></div>
+        <div class="flex justify-between text-green-600 font-semibold"><span>Diskon Promo</span><span id="cartDiscount font-mono">- Rp 0</span></div>
+        <div class="flex justify-between text-base font-extrabold border-t border-neutral-200 dark:border-neutral-800 pt-2 text-elsaDark dark:text-white"><span>Total Bayar</span><span id="cartTotal" class="text-elsaRed dark:text-elsaGold">Rp 0</span></div>
+      </div>
+
+      <button onclick="openInvoicePreview()" class="ripple mt-2 w-full flex items-center justify-center gap-2 rounded-2xl bg-green-600 py-4 text-sm font-bold text-white shadow-lg hover:bg-green-700 transition">
+        <i class="fa-brands fa-whatsapp text-lg"></i> Checkout WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="invoiceModal" class="fixed inset-0 z-[90] hidden items-center justify-center bg-black/85 p-4 backdrop-blur-md">
+  <div class="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 max-h-[90vh] flex flex-col justify-between">
+    <div>
+      <div class="text-center border-b border-dashed border-neutral-300 dark:border-neutral-700 pb-4">
+        <h3 class="font-display text-xl font-bold">INVOICE PEMBAYARAN</h3>
+        <p id="invId" class="font-mono text-xs font-bold text-elsaOrange mt-1">INV-RN-00000</p>
+        <p id="invDate" class="text-[10px] text-neutral-400 mt-0.5">Tanggal</p>
+      </div>
+      
+      <div id="invItems" class="my-4 max-h-52 overflow-y-auto space-y-2 text-xs divide-y divide-neutral-100 dark:divide-neutral-800"></div>
+      
+      <div class="border-t border-dashed border-neutral-300 dark:border-neutral-700 pt-3 space-y-1 text-xs font-bold">
+        <div class="flex justify-between"><span>Total Tagihan:</span><span id="invTotal" class="text-sm text-elsaRed dark:text-elsaGold">Rp 0</span></div>
+      </div>
+
+      <div class="mt-4">
+        <label class="block text-[11px] font-bold text-neutral-500 mb-1">Tipe Pesanan:</label>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <label class="flex items-center gap-2 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800 cursor-pointer"><input type="radio" name="orderType" value="Bungkus / Takeaway" checked class="accent-elsaRed"> Takeaway</label>
+          <label class="flex items-center gap-2 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800 cursor-pointer"><input type="radio" name="orderType" value="Makan di Tempat" class="accent-elsaRed"> Dine-in</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex gap-3 mt-6 pt-3 border-t border-neutral-100 dark:border-neutral-800">
+      <button onclick="closeModal('invoiceModal')" class="flex-1 rounded-xl border border-neutral-200 py-3 text-xs font-bold hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800 transition">Batal</button>
+      <button onclick="sendToWhatsappFinal()" class="flex-[2] rounded-xl bg-elsaRed py-3 text-xs font-bold text-white shadow-glow hover:bg-red-700 transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-paper-plane"></i> Kirim Pesanan
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="adminModal" class="fixed inset-0 z-[95] hidden overflow-y-auto bg-black/90 p-4 sm:p-6 backdrop-blur-md">
+  <div class="mx-auto max-w-4xl rounded-3xl bg-white p-6 shadow-2xl dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-elsaDark dark:text-white my-8">
+    <div class="flex justify-between items-center border-b border-neutral-200 dark:border-neutral-800 pb-4">
+      <div class="flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-elsaDark text-elsaGold dark:bg-white dark:text-elsaDark"><i class="fa-solid fa-sliders"></i></span>
+        <div>
+          <h3 class="font-display text-xl font-bold">Nusantara Admin Portal</h3>
+          <p class="text-[11px] text-neutral-500">Perubahan disimpan instan pada memori peramban (LocalStorage).</p>
+        </div>
+      </div>
+      <button onclick="closeModal('adminModal')" class="rounded-full p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"><i class="fa-solid fa-xmark text-lg"></i></button>
+    </div>
+
+    <div class="flex gap-2 my-6 border-b border-neutral-100 dark:border-neutral-800 pb-3 text-xs font-bold">
+      <button onclick="switchAdminTab('menu')" id="tabBtnMenu" class="rounded-xl bg-elsaRed px-4 py-2 text-white shadow-md">📦 Kelola Menu</button>
+      <button onclick="switchAdminTab('set')" id="tabBtnSet" class="rounded-xl bg-neutral-100 px-4 py-2 dark:bg-neutral-800 hover:bg-neutral-200">⚙️ Pengaturan Toko</button>
+      <button onclick="resetDataStorage()" class="ml-auto rounded-xl bg-red-100 text-red-600 px-3 py-2 hover:bg-red-200">🔄 Reset Default</button>
+    </div>
+
+    <div id="adminViewMenu" class="space-y-6">
+      <form id="formAddMenu" onsubmit="saveMenuAdmin(event)" class="grid gap-3 p-4 rounded-2xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-xs sm:grid-cols-3">
+        <input type="hidden" id="admId">
+        <input required type="text" id="admName" placeholder="Nama Menu *" class="rounded-xl border p-2.5 dark:bg-neutral-900 dark:border-neutral-700">
+        <select id="admCat" class="rounded-xl border p-2.5 dark:bg-neutral-900 dark:border-neutral-700">
+          <option value="Rice Meals">Rice Meals</option><option value="Chicken">Chicken</option><option value="Beef">Beef</option><option value="Fish">Fish</option><option value="Vegetables">Vegetables</option><option value="Soup">Soup</option><option value="Traditional Drinks">Drinks</option><option value="Desserts">Desserts</option>
+        </select>
+        <input required type="number" id="admPrice" placeholder="Harga (Angka saja, cth: 18000) *" class="rounded-xl border p-2.5 dark:bg-neutral-900 dark:border-neutral-700">
+        <input required type="url" id="admImg" placeholder="URL Gambar (Unsplash/Imgur) *" class="rounded-xl border p-2.5 dark:bg-neutral-900 dark:border-neutral-700 sm:col-span-2">
+        <select id="admSpicy" class="rounded-xl border p-2.5 dark:bg-neutral-900 dark:border-neutral-700">
+          <option value="0">Tidak Pedas</option><option value="1">Pedas Sedang</option><option value="2">Pedas Ekstra</option>
+        </select>
+        <textarea required id="admDesc" placeholder="Deskripsi Singkat *" rows="2" class="rounded-xl border p-2.5 dark:bg-neutral-900 dark:border-neutral-700 sm:col-span-3"></textarea>
+        <div class="sm:col-span-3 flex justify-end gap-2">
+          <button type="button" onclick="resetMenuForm()" class="px-4 py-2 rounded-xl border font-bold">Batal</button>
+          <button type="submit" class="px-6 py-2 rounded-xl bg-elsaRed text-white font-bold shadow-glow">Simpan Menu</button>
+        </div>
+      </form>
+
+      <div class="overflow-x-auto max-h-96 rounded-2xl border dark:border-neutral-800">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-neutral-100 dark:bg-neutral-800 sticky top-0 font-bold">
+            <tr><th class="p-3">Menu</th><th class="p-3">Kategori</th><th class="p-3">Harga</th><th class="p-3 text-right">Aksi</th></tr>
+          </thead>
+          <tbody id="admMenuTable" class="divide-y divide-neutral-100 dark:divide-neutral-800"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="adminViewSet" class="hidden space-y-4 text-xs">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label class="font-bold block mb-1">Nomor WhatsApp Toko (Awali 62):</label>
+          <input type="number" id="setWa" class="w-full p-3 rounded-xl border dark:bg-neutral-950 dark:border-neutral-800 font-mono">
+        </div>
+        <div>
+          <label class="font-bold block mb-1">Teks Banner Promo Atas:</label>
+          <input type="text" id="setBanner" class="w-full p-3 rounded-xl border dark:bg-neutral-950 dark:border-neutral-800">
+        </div>
+        <div>
+          <label class="font-bold block mb-1">Jam Buka (0-23):</label>
+          <input type="number" id="setOpen" class="w-full p-3 rounded-xl border dark:bg-neutral-950 dark:border-neutral-800">
+        </div>
+        <div>
+          <label class="font-bold block mb-1">Jam Tutup (0-23):</label>
+          <input type="number" id="setClose" class="w-full p-3 rounded-xl border dark:bg-neutral-950 dark:border-neutral-800">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="font-bold block mb-1">Alamat Restoran:</label>
+          <input type="text" id="setAddress" class="w-full p-3 rounded-xl border dark:bg-neutral-950 dark:border-neutral-800">
+        </div>
+      </div>
+      <button onclick="saveSettingsAdmin()" class="w-full py-3 bg-green-600 font-bold text-white rounded-xl shadow-lg hover:bg-green-700">Simpan Pengaturan</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* --- 1. DATA SEEDING & STATE MANAGEMENT --- */
+const SEED_DATA = {
+  settings: {
+    wa: '628123456789',
+    address: 'Jl. Merdeka No.123, Sukamaju, Sentosa, Indonesia',
+    open: 8,
+    close: 21,
+    banner: '🔥 FLASH SALE HARI INI: DISKON 15% DENGAN KODE HEMAT15'
+  },
+  menu: [
+    { id: 101, category: 'Rice Meals', name: 'Nasi Rames ELSA', desc: 'Nasi hangat dengan pilihan lauk harian berganti, sambal terasi, dan sayur segar harian.', price: 18000, rating: '4.9', spicy: 2, image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=80' },
+    { id: 102, category: 'Chicken', name: 'Ayam Goreng Rempah', desc: 'Ayam ungkep bumbu kuning berempah digoreng garing renyah hingga ke tulang.', price: 16000, rating: '4.8', spicy: 1, image: 'https://images.unsplash.com/photo-1625938145744-e3805153994d?auto=format&fit=crop&w=700&q=80' },
+    { id: 103, category: 'Beef', name: 'Daging Sapi Balado', desc: 'Potongan empuk daging sapi balut sambal merah cabai besar berpadu kaldu gurih.', price: 22000, rating: '4.7', spicy: 2, image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=700&q=80' },
+    { id: 104, category: 'Fish', name: 'Ikan Goreng Sambal', desc: 'Ikan nila goreng keemasan disajikan bersama sambal kecap jeruk limau segar.', price: 20000, rating: '4.6', spicy: 1, image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=700&q=80' },
+    { id: 105, category: 'Vegetables', name: 'Sayur Lodeh Manis', desc: 'Sup santan sayuran gurih dengan bumbu tradisional pilihan kaya serat herbal.', price: 10000, rating: '4.7', spicy: 0, image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=700&q=80' },
+    { id: 106, category: 'Soup', name: 'Soto Ayam Kuning', desc: 'Kuah soto bumbu kunyit harum lengkap dengan suwiran ayam, soun, dan telur rebus.', price: 17000, rating: '4.9', spicy: 0, image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80' },
+    { id: 107, category: 'Rice Meals', name: 'Tempe Orek Kecap', desc: 'Tumisan potongan tempe manis gurih dengan tekstur karamelisasi kecap kedelai.', price: 8000, rating: '4.8', spicy: 1, image: 'https://images.unsplash.com/photo-1617692855027-33b14f061079?auto=format&fit=crop&w=700&q=80' },
+    { id: 108, category: 'Traditional Drinks', name: 'Es Teh Manis Melati', desc: 'Seduhan daun teh melati asli ditambahkan es batu kristal penyejuk tenggorokan.', price: 5000, rating: '4.6', spicy: 0, image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80' },
+    { id: 109, category: 'Desserts', name: 'Pisang Goreng Madu', desc: 'Pisang raja matang digoreng dengan tepung renyah beraroma karamel madu alami.', price: 10000, rating: '4.8', spicy: 0, image: 'https://images.unsplash.com/photo-1601314002957-7c2aaebe6e88?auto=format&fit=crop&w=700&q=80' },
+    { id: 110, category: 'Chicken', name: 'Telur Balado Merah', desc: 'Telur ayam rebus digoreng berkulit lalu disiram bumbu balado tomat pedas.', price: 8000, rating: '4.5', spicy: 2, image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=700&q=80' }
+  ],
+  why: [['fa-leaf','Bahan Segar Pilihan'],['fa-tags','Harga Kantong Pelajar'],['fa-bolt','Penyajian Kilat'],['fa-sparkles','Dapur Terbuka Bersih'],['fa-mortar-pestle','Ulekan Bumbu Asli'],['fa-face-smile','Pelayanan Ramah'],['fa-people-roof','Cocok Untuk Keluarga'],['fa-calendar-day','Menu Rotasi Harian']],
+  gallery: [['https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=82','Penyajian prasmanan modern'],['https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=900&q=82','Paket nasi rames komplit'],['https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=82','Hidangan pendamping tradisional'],['https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=82','Meja makan bersih higienis'],['https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=82','Sayur lodeh kuah santan'],['https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=82','Es teh manis segar']]
+};
+
+// Initialize App Storage
+let STORE = JSON.parse(localStorage.getItem('RN_DATA')) || SEED_DATA;
+let CART = JSON.parse(localStorage.getItem('RN_CART')) || [];
+let FAVS = JSON.parse(localStorage.getItem('RN_FAVS')) || [];
+let ACTIVE_CAT = 'All';
+let DISC_RATE = 0;
+
+const formatRp = (n) => 'Rp ' + new Intl.NumberFormat('id-ID').format(n);
+
+/* --- 2. CORE RENDER LOGIC --- */
+function initApp() {
+  renderCategories();
+  renderMenu();
+  renderWhy();
+  renderGallery();
+  updateOperationalStatus();
+  updateCartBadge();
+  startFlashSaleTimer();
+  syncSettingsUI();
+  
+  // Fade out loading screen
+  setTimeout(() => {
+    const ls = document.getElementById('loadingScreen');
+    if(ls) { ls.style.opacity = '0'; setTimeout(() => ls.remove(), 700); }
+  }, 800);
+}
+
+function renderCategories() {
+  const cats = ['All', ...new Set(STORE.menu.map(m => m.category))];
+  const wrap = document.getElementById('categoryFilters');
+  wrap.innerHTML = cats.map(c => `
+    <button type="button" onclick="filterCategory('${c}')" class="whitespace-nowrap rounded-full border px-5 py-2.5 text-xs font-bold transition shadow-xs ${c === ACTIVE_CAT ? 'border-elsaRed bg-elsaRed text-white shadow-glow' : 'border-neutral-200 bg-white hover:border-elsaRed dark:border-neutral-800 dark:bg-neutral-900'}">${c}</button>
+  `).join('');
+}
+
+function filterCategory(cat) { ACTIVE_CAT = cat; renderCategories(); renderMenu(); }
+
+function renderMenu() {
+  const q = (document.getElementById('menuSearch')?.value || '').toLowerCase();
+  const grid = document.getElementById('menuGrid');
+  
+  const filtered = STORE.menu.filter(item => {
+    const matchCat = ACTIVE_CAT === 'All' || item.category === ACTIVE_CAT;
+    const matchQ = (item.name + ' ' + item.desc + ' ' + item.category).toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+
+  if(filtered.length === 0) {
+    grid.innerHTML = `<div class="col-span-full rounded-3xl bg-elsaCream p-12 text-center dark:bg-neutral-950"><i class="fa-solid fa-cookie-bite text-4xl text-neutral-400 mb-3"></i><p class="font-bold text-sm">Hidangan tidak ditemukan.</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(item => {
+    const isFav = FAVS.includes(item.id);
+    const spicyIcons = '🌶️'.repeat(item.spicy || 0) || '<span class="text-[10px] text-neutral-400">Original</span>';
+    
+    return `
+    <article class="food-card flex flex-col justify-between rounded-3xl bg-white p-4 shadow-md dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 relative group cursor-pointer">
+      <div onclick="openDetail(${item.id})">
+        <div class="relative overflow-hidden rounded-2xl">
+          <img class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600'">
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[10px] font-bold text-elsaRed backdrop-blur-md dark:bg-black/70 dark:text-elsaGold">${item.category}</span>
+        </div>
+        
+        <div class="pt-4 px-1">
+          <div class="flex justify-between items-center text-xs mb-1">
+            <span>${spicyIcons}</span>
+            <span class="font-bold text-elsaOrange"><i class="fa-solid fa-star text-elsaGold"></i> ${item.rating}</span>
+          </div>
+          <h4 class="font-display text-lg font-bold group-hover:text-elsaRed transition line-clamp-1">${item.name}</h4>
+          <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400 line-clamp-2 leading-relaxed">${item.desc}</p>
+        </div>
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-neutral-100 dark:border-neutral-800/80 flex items-center justify-between px-1">
+        <strong class="text-base font-black text-elsaRed dark:text-elsaGold">${formatRp(item.price)}</strong>
+        <div class="flex items-center gap-1.5">
+          <button type="button" onclick="toggleFav(${item.id}, event)" class="grid h-9 w-9 place-items-center rounded-full border border-neutral-200 dark:border-neutral-700 hover:scale-110 transition ${isFav ? 'text-elsaRed bg-red-50 dark:bg-red-950/40 border-elsaRed' : 'text-neutral-400'}" aria-label="Favorit"><i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i></button>
+          <button type="button" onclick="addToCart(${item.id}, event)" class="ripple rounded-full bg-elsaDark px-4 py-2 text-xs font-bold text-white transition hover:bg-elsaRed dark:bg-white dark:text-elsaDark"><i class="fa-solid fa-plus"></i> Pesan</button>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+function renderWhy() {
+  document.getElementById('whyGrid').innerHTML = STORE.why.map(w => `
+    <article class="reveal rounded-3xl bg-white p-6 text-center shadow-sm border border-neutral-100 dark:bg-neutral-900 dark:border-neutral-800 transition hover:-translate-y-1.5">
+      <span class="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-elsaRed/10 text-xl text-elsaRed shadow-xs"><i class="fa-solid ${w[0]}"></i></span>
+      <h5 class="mt-4 font-bold text-sm">${w[1]}</h5>
+    </article>`).join('');
+}
+
+function renderGallery() {
+  document.getElementById('galleryGrid').innerHTML = STORE.gallery.map((g, idx) => `
+    <figure onclick="openLightbox('${g[0]}','${g[1]}')" class="group cursor-pointer overflow-hidden rounded-3xl bg-neutral-100 relative">
+      <img class="h-auto w-full object-cover transition duration-500 group-hover:scale-110 ${idx%2 ? 'aspect-[4/5]' : 'aspect-[5/4]'}" src="${g[0]}" alt="${g[1]}" loading="lazy">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4 text-white font-semibold text-xs backdrop-blur-2xs"><span><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-elsaGold"></i> ${g[1]}</span></div>
+    </figure>`).join('');
+}
+
+/* --- 3. SHOPPING CART ENGINE --- */
+function addToCart(id, e) {
+  if(e) e.stopPropagation();
+  const menu = STORE.menu.find(m => m.id === id);
+  if(!menu) return;
+
+  const exist = CART.find(c => c.id === id);
+  if(exist) { exist.qty += 1; } else { CART.push({ id: menu.id, name: menu.name, price: menu.price, qty: 1, note: '' }); }
+  
+  saveCart();
+  showToast(`<b>${menu.name}</b> masuk ke keranjang`);
+}
+
+function updateQty(id, delta) {
+  const item = CART.find(c => c.id === id);
+  if(!item) return;
+  item.qty += delta;
+  if(item.qty <= 0) CART = CART.filter(c => c.id !== id);
+  saveCart(); renderCartUI();
+}
+
+function updateNote(id, val) {
+  const item = CART.find(c => c.id === id);
+  if(item) { item.note = val; saveCart(); }
+}
+
+function saveCart() { localStorage.setItem('RN_CART', JSON.stringify(CART)); updateCartBadge(); }
+
+function updateCartBadge() {
+  const totalQty = CART.reduce((sum, i) => sum + i.qty, 0);
+  const badge = document.getElementById('cartCount');
+  if(badge) {
+    badge.innerText = totalQty;
+    badge.className = totalQty > 0 ? badge.className.replace('scale-0','scale-100') : badge.className.replace('scale-100','scale-0');
+  }
+}
+
+function renderCartUI() {
+  const list = document.getElementById('cartList');
+  if(CART.length === 0) {
+    list.innerHTML = `<div class="py-16 text-center text-neutral-400"><i class="fa-solid fa-basket-shopping text-4xl mb-2 opacity-40"></i><p class="text-xs font-bold">Keranjang Anda masih kosong.</p></div>`;
+  } else {
+    list.innerHTML = CART.map(i => `
+      <div class="pt-3 first:pt-0">
+        <div class="flex justify-between items-start text-xs font-bold">
+          <span class="text-elsaDark dark:text-white">${i.name}</span>
+          <span class="text-elsaRed dark:text-elsaGold">${formatRp(i.price * i.qty)}</span>
+        </div>
+        <div class="flex items-center justify-between mt-2">
+          <input type="text" value="${i.note}" onchange="updateNote(${i.id}, this.value)" placeholder="Catatan (pedas/tanpa sayur)..." class="text-[11px] bg-neutral-100 dark:bg-neutral-800 rounded-lg px-2 py-1 w-48 outline-none focus:ring-1 focus:ring-elsaRed">
+          <div class="flex items-center gap-2 border rounded-lg px-2 py-0.5 bg-white dark:bg-neutral-900 dark:border-neutral-700">
+            <button onclick="updateQty(${i.id}, -1)" class="font-bold text-neutral-400 hover:text-red-500">-</button>
+            <span class="text-xs font-extrabold w-4 text-center">${i.qty}</span>
+            <button onclick="updateQty(${i.id}, 1)" class="font-bold text-neutral-400 hover:text-green-500">+</button>
+          </div>
+        </div>
+      </div>`).join('');
+  }
+
+  const subtotal = CART.reduce((s, i) => s + (i.price * i.qty), 0);
+  const disc = subtotal * DISC_RATE;
+  const total = subtotal - disc;
+
+  document.getElementById('cartSubtotal').innerText = formatRp(subtotal);
+  document.getElementById('cartDiscount').innerText = '- ' + formatRp(disc);
+  document.getElementById('cartTotal').innerText = formatRp(total);
+}
+
+function applyPromoCode() {
+  const code = (document.getElementById('voucherInput')?.value || '').trim().toUpperCase();
+  const msg = document.getElementById('promoMsg');
+  if(code === 'HEMAT15' || code === 'NUSANTARA') {
+    DISC_RATE = 0.15;
+    msg.innerText = "✓ Diskon 15% Berhasil Digunakan!";
+    msg.classList.remove('hidden','text-red-500'); msg.classList.add('text-green-600');
+  } else {
+    DISC_RATE = 0;
+    msg.innerText = "✕ Kode Voucher Tidak Valid";
+    msg.classList.remove('hidden','text-green-600'); msg.classList.add('text-red-500');
+  }
+  renderCartUI();
+}
+
+/* --- 4. MODALS & INVOICE WA ENGINE --- */
+function openModal(id) { document.getElementById(id).classList.replace('hidden','flex'); document.body.style.overflow='hidden'; }
+function closeModal(id) { document.getElementById(id).classList.replace('flex','hidden'); document.body.style.overflow='auto'; }
+
+function openDetail(id) {
+  const m = STORE.menu.find(i => i.id === id);
+  if(!m) return;
+  document.getElementById('detImg').src = m.image;
+  document.getElementById('detCat').innerText = m.category;
+  document.getElementById('detTitle').innerText = m.name;
+  document.getElementById('detDesc').innerText = m.desc;
+  document.getElementById('detPrice').innerText = formatRp(m.price);
+  document.getElementById('detRate').innerText = `⭐ ${m.rating}`;
+  document.getElementById('detSpicy').innerText = '🌶️'.repeat(m.spicy || 0) || 'Original';
+  document.getElementById('detAddBtn').onclick = () => { addToCart(m.id); closeModal('detailModal'); };
+  openModal('detailModal');
+}
+
+function openInvoicePreview() {
+  if(CART.length === 0) return showToast('Keranjang masih kosong!');
+  closeModal('cartModal');
+  
+  const invNum = 'INV-RN-' + Math.floor(10000 + Math.random() * 90000);
+  const subtotal = CART.reduce((s, i) => s + (i.price * i.qty), 0);
+  const total = subtotal - (subtotal * DISC_RATE);
+  
+  document.getElementById('invId').innerText = invNum;
+  document.getElementById('invDate').innerText = new Date().toLocaleString('id-ID', { dateStyle:'medium', timeStyle:'short' });
+  document.getElementById('invItems').innerHTML = CART.map(i => `
+    <div class="py-1.5 flex justify-between">
+      <div><span class="font-bold">${i.qty}x</span> ${i.name} ${i.note ? `<br><span class="text-[10px] text-neutral-400">(*${i.note})</span>` : ''}</div>
+      <span class="font-mono font-semibold">${formatRp(i.price * i.qty)}</span>
+    </div>`).join('');
+  document.getElementById('invTotal').innerText = formatRp(total);
+  
+  openModal('invoiceModal');
+}
+
+function sendToWhatsappFinal() {
+  const invNum = document.getElementById('invId').innerText;
+  const oType = document.querySelector('input[name="orderType"]:checked')?.value || 'Takeaway';
+  const total = document.getElementById('invTotal').innerText;
+  
+  let txt = `Halo *Restoran Nusantara*,\nSaya ingin memesan makanan:\n\n*No. Pesanan:* ${invNum}\n*Tipe:* ${oType}\n----------------------------------\n`;
+  CART.forEach(i => { txt += `${i.qty}x ${i.name} (${formatRp(i.price*i.qty)})\n${i.note ? `  _Catatan: ${i.note}_\n` : ''}`; });
+  if(DISC_RATE > 0) txt += `\n*Diskon Promo (15% Applied)*`;
+  txt += `\n----------------------------------\n*Total Pembayaran: ${total}*\n\nMohon informasi metode pembayarannya. Terima kasih!`;
+
+  window.open(`https://wa.me/${STORE.settings.wa}?text=${encodeURIComponent(txt)}`, '_blank');
+  CART = []; saveCart(); closeModal('invoiceModal');
+  showToast("Pesanan dialihkan ke WhatsApp!");
+}
+
+/* --- 5. FAVORITES & NOTIFICATIONS --- */
+function toggleFav(id, e) {
+  if(e) e.stopPropagation();
+  if(FAVS.includes(id)) { FAVS = FAVS.filter(i => i !== id); showToast("Dihapus dari favorit"); }
+  else { FAVS.push(id); showToast("❤ Ditambahkan ke favorit"); }
+  localStorage.setItem('RN_FAVS', JSON.stringify(FAVS));
+  renderMenu();
+}
+
+function showToast(html) {
+  const cont = document.getElementById('toastContainer');
+  const div = document.createElement('div');
+  div.className = 'flex items-center gap-3 rounded-2xl bg-elsaDark px-5 py-3.5 text-xs font-bold text-white shadow-2xl transition-all duration-300 pointer-events-auto dark:bg-white dark:text-elsaDark animate-in slide-in-from-bottom-5';
+  div.innerHTML = `<i class="fa-solid fa-circle-check text-green-500 text-sm"></i> <span>${html}</span>`;
+  cont.appendChild(div);
+  setTimeout(() => { div.style.opacity = '0'; setTimeout(() => div.remove(), 300); }, 2800);
+}
+
+/* --- 6. ADMIN PANEL (LOCALSTORAGE CRUD) --- */
+function openAdminModal() {
+  const pin = prompt("Masukkan PIN Admin (Demo PIN: admin):");
+  if(pin !== 'admin') return alert("PIN Tidak Valid!");
+  switchAdminTab('menu');
+  openModal('adminModal');
+}
+
+function switchAdminTab(tab) {
+  const vMenu = document.getElementById('adminViewMenu'), vSet = document.getElementById('adminViewSet');
+  const bMenu = document.getElementById('tabBtnMenu'), bSet = document.getElementById('tabBtnSet');
+  if(tab === 'menu') {
+    vMenu.classList.remove('hidden'); vSet.classList.add('hidden');
+    bMenu.className = "rounded-xl bg-elsaRed px-4 py-2 text-white shadow-md"; bSet.className = "rounded-xl bg-neutral-100 px-4 py-2 dark:bg-neutral-800";
+    renderAdminMenuTable();
+  } else {
+    vMenu.classList.add('hidden'); vSet.classList.remove('hidden');
+    bSet.className = "rounded-xl bg-elsaRed px-4 py-2 text-white shadow-md"; bMenu.className = "rounded-xl bg-neutral-100 px-4 py-2 dark:bg-neutral-800";
+    syncSettingsUI();
+  }
+}
+
+function renderAdminMenuTable() {
+  document.getElementById('admMenuTable').innerHTML = STORE.menu.map(m => `
+    <tr>
+      <td class="p-3 font-bold flex items-center gap-2"><img src="${m.image}" class="w-8 h-8 rounded-lg object-cover"> ${m.name}</td>
+      <td class="p-3">${m.category}</td>
+      <td class="p-3 font-mono text-elsaRed font-bold">${formatRp(m.price)}</td>
+      <td class="p-3 text-right space-x-1">
+        <button onclick="editMenuAdmin(${m.id})" class="px-2 py-1 bg-blue-100 text-blue-600 rounded">Edit</button>
+        <button onclick="deleteMenuAdmin(${m.id})" class="px-2 py-1 bg-red-100 text-red-600 rounded">Hapus</button>
+      </td>
+    </tr>`).join('');
+}
+
+function saveMenuAdmin(e) {
+  e.preventDefault();
+  const id = document.getElementById('admId').value;
+  const newItem = {
+    id: id ? parseInt(id) : Date.now(),
+    name: document.getElementById('admName').value,
+    category: document.getElementById('admCat').value,
+    price: parseInt(document.getElementById('admPrice').value),
+    image: document.getElementById('admImg').value,
+    spicy: parseInt(document.getElementById('admSpicy').value),
+    desc: document.getElementById('admDesc').value,
+    rating: '4.8'
+  };
+
+  if(id) { STORE.menu = STORE.menu.map(m => m.id === parseInt(id) ? newItem : m); }
+  else { STORE.menu.unshift(newItem); }
+
+  saveStore(); resetMenuForm(); renderAdminMenuTable(); renderCategories(); renderMenu();
+  showToast("Daftar Menu Berhasil Diperbarui!");
+}
+
+function editMenuAdmin(id) {
+  const m = STORE.menu.find(i => i.id === id);
+  if(!m) return;
+  document.getElementById('admId').value = m.id;
+  document.getElementById('admName').value = m.name;
+  document.getElementById('admCat').value = m.category;
+  document.getElementById('admPrice').value = m.price;
+  document.getElementById('admImg').value = m.image;
+  document.getElementById('admSpicy').value = m.spicy || 0;
+  document.getElementById('admDesc').value = m.desc;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function deleteMenuAdmin(id) {
+  if(!confirm("Hapus menu ini permanen?")) return;
+  STORE.menu = STORE.menu.filter(m => m.id !== id);
+  saveStore(); renderAdminMenuTable(); renderCategories(); renderMenu();
+}
+
+function resetMenuForm() { document.getElementById('formAddMenu').reset(); document.getElementById('admId').value = ''; }
+
+function syncSettingsUI() {
+  const s = STORE.settings;
+  if(document.getElementById('setWa')) {
+    document.getElementById('setWa').value = s.wa;
+    document.getElementById('setBanner').value = s.banner;
+    document.getElementById('setOpen').value = s.open;
+    document.getElementById('setClose').value = s.close;
+    document.getElementById('setAddress').value = s.address;
+  }
+  // Update frontend labels
+  if(document.getElementById('dispPhone')) document.getElementById('dispPhone').innerText = '+' + s.wa;
+  if(document.getElementById('dispAddress')) document.getElementById('dispAddress').innerText = s.address;
+  if(document.getElementById('dispHours')) document.getElementById('dispHours').innerText = `${String(s.open).padStart(2,'0')}:00 - ${String(s.close).padStart(2,'0')}:00 WIB`;
+  if(document.getElementById('btnCallWA')) document.getElementById('btnCallWA').href = `https://wa.me/${s.wa}`;
+  if(document.querySelector('#flashSaleBar span')) document.querySelector('#flashSaleBar span').innerHTML = `${s.banner} — BERAKHIR: <span id="countdownTimer" class="font-mono text-elsaGold">00:00:00</span>`;
+  document.getElementById('statTotalMenu').innerText = STORE.menu.length;
+}
+
+function saveSettingsAdmin() {
+  STORE.settings = {
+    wa: document.getElementById('setWa').value,
+    banner: document.getElementById('setBanner').value,
+    open: parseInt(document.getElementById('setOpen').value),
+    close: parseInt(document.getElementById('setClose').value),
+    address: document.getElementById('setAddress').value
+  };
+  saveStore(); syncSettingsUI(); updateOperationalStatus();
+  showToast("Konfigurasi Toko Disimpan!"); closeModal('adminModal');
+}
+
+function saveStore() { localStorage.setItem('RN_DATA', JSON.stringify(STORE)); }
+function resetDataStorage() { if(confirm("Kembalikan semua data ke default pabrik?")) { localStorage.clear(); location.reload(); } }
+
+/* --- 7. HELPER UTILITIES & EVENT LISTENERS --- */
+function updateOperationalStatus() {
+  const h = new Date().getHours();
+  const isOpen = h >= STORE.settings.open && h < STORE.settings.close;
+  const dot = document.getElementById('headerStatusDot');
+  const badgeText = document.getElementById('heroStoreText');
+  const badgeDot = document.getElementById('heroStoreBadge');
+  
+  if(isOpen) {
+    if(dot) dot.className = "h-2 w-2 rounded-full bg-green-500 animate-pulse";
+    if(badgeText) badgeText.innerText = `Buka Sekarang (${STORE.settings.open}:00 - ${STORE.settings.close}:00)`;
+    if(badgeDot) badgeDot.className = "inline-block h-2.5 w-2.5 rounded-full bg-green-500";
+  } else {
+    if(dot) dot.className = "h-2 w-2 rounded-full bg-red-500";
+    if(badgeText) badgeText.innerText = `Sedang Tutup (Buka Besok Jam ${STORE.settings.open}:00)`;
+    if(badgeDot) badgeDot.className = "inline-block h-2.5 w-2.5 rounded-full bg-red-500";
+  }
+}
+
+function startFlashSaleTimer() {
+  setInterval(() => {
+    const now = new Date();
+    const end = new Date(); end.setHours(23,59,59,0);
+    const diff = Math.max(0, Math.floor((end - now) / 1000));
+    const hr = String(Math.floor(diff / 3600)).padStart(2, '0');
+    const mn = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+    const sc = String(diff % 60).padStart(2, '0');
+    const timerEl = document.getElementById('countdownTimer');
+    if(timerEl) timerEl.innerText = `${hr}:${mn}:${sc}`;
+  }, 1000);
+}
+
+function openLightbox(src, alt) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightboxImage');
+  img.src = src; img.alt = alt;
+  lb.classList.replace('hidden','flex');
+  setTimeout(() => img.classList.replace('scale-95','scale-100'), 50);
+}
+
+function sendQuickMsg(e) {
+  e.preventDefault();
+  const name = document.getElementById('qcName').value;
+  const phone = document.getElementById('qcPhone').value;
+  const msg = document.getElementById('qcMsg').value;
+  window.open(`https://wa.me/${STORE.settings.wa}?text=${encodeURIComponent(`Halo Nusantara, saya ${name} (${phone}).\n\nPesan: ${msg}`)}`, '_blank');
+}
+
+// DOM Event Bindings
+document.getElementById('menuSearch')?.addEventListener('input', renderMenu);
+document.getElementById('cartBtn')?.addEventListener('click', () => { renderCartUI(); openModal('cartModal'); });
+document.getElementById('closeLightbox')?.addEventListener('click', () => {
+  document.getElementById('lightboxImage').classList.replace('scale-100','scale-95');
+  setTimeout(() => document.getElementById('lightbox').classList.replace('flex','hidden'), 200);
+});
+
+// Scroll Progress & Nav Animation
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scrollProgress').style.width = scrolled + '%';
+
+  const header = document.getElementById('siteHeader');
+  const bTop = document.getElementById('backToTop');
+  if(window.scrollY > 40) { header.classList.add('bg-white/90','dark:bg-neutral-950/90','backdrop-blur-md','shadow-md'); }
+  else { header.classList.remove('bg-white/90','dark:bg-neutral-950/90','backdrop-blur-md','shadow-md'); }
+  
+  if(window.scrollY > 400) { bTop.classList.replace('hidden','grid'); } else { bTop.classList.replace('grid','hidden'); }
+});
+
+document.getElementById('backToTop')?.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+document.getElementById('mobileMenuBtn')?.addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('hidden'));
+document.getElementById('themeToggle')?.addEventListener('click', function() {
+  document.documentElement.classList.toggle('dark');
+  this.querySelector('i').className = document.documentElement.classList.contains('dark') ? 'fa-solid fa-sun text-elsaGold' : 'fa-solid fa-moon';
+});
+
+// Reveal Observer & Animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* --- 8. PROGRESSIVE WEB APP (INLINE BLOB ENGINE) --- */
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  window.addEventListener('load', () => {
+    const swScript = `self.addEventListener('install', () => self.skipWaiting()); self.addEventListener('fetch', e => e.respondWith(fetch(e.request).catch(() => caches.match(e.request))));`;
+    const blob = new Blob([swScript], {type: 'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(() => {});
+  });
+}
+
+// Boot
+window.addEventListener('DOMContentLoaded', initApp);
+</script>
+</body>
+</html>
